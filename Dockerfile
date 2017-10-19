@@ -7,13 +7,17 @@ RUN apt-get update && \
 
 RUN apt-get -y install wget && \
     wget -c https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh
-    bash Anaconda3-5.0.0.1-Linux-x86_64.sh -b -p /anaconda
+
+RUNbash Anaconda3-5.0.0.1-Linux-x86_64.sh -b -p /anaconda
 
 RUN mkdir /src && \
     cd /src && \
     git clone https://github.com/h3dema/object_detector_app.git && \
     cd object_detector_app && \
     git submodule init && \
-    git submodule update && \
+    git submodule update
+
+RUN export PATH="/anaconda/bin:$PATH" && \
+    cd /src/object_detector_app && \
     conda env create -f environment.yml && \
     sudo apt-get install protobuf-compiler python-pil python-lxml
