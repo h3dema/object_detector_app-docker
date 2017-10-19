@@ -2,6 +2,6 @@
 
 ```
 docker build -t opencv github.com/h3dema/object_detector_app-docker
-docker run --network=bridge -it opencv
-docker run --network=host -it opencv
+docker run --net=bridge -it opencv
+docker run --net=host -it opencv
 ```
