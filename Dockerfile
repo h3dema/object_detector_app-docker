@@ -8,7 +8,7 @@ RUN apt-get update && \
 RUN apt-get -y install wget && \
     wget -c https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh
 
-RUNbash Anaconda3-5.0.0.1-Linux-x86_64.sh -b -p /anaconda
+RUN bash Anaconda3-5.0.0.1-Linux-x86_64.sh -b -p /anaconda
 
 RUN mkdir /src && \
     cd /src && \
