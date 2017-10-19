@@ -20,4 +20,4 @@ RUN mkdir /src && \
 RUN export PATH="/anaconda/bin:$PATH" && \
     cd /src/object_detector_app && \
     conda env create -f environment.yml && \
-    sudo apt-get install protobuf-compiler python-pil python-lxml
+    sudo apt-get install -y protobuf-compiler python-pil python-lxml
