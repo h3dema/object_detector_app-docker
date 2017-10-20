@@ -21,3 +21,5 @@ RUN export PATH="/anaconda/bin:$PATH" && \
     cd /src/object_detector_app && \
     conda env create -f environment.yml && \
     sudo apt-get install -y protobuf-compiler python-pil python-lxml
+
+RUN echo "export PATH=/anaconda/bin:$PATH" >> /root/.bashrc
