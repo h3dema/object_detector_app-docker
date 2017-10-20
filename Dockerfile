@@ -10,6 +10,8 @@ RUN apt-get -y install wget && \
 
 RUN bash Anaconda3-5.0.0.1-Linux-x86_64.sh -b -p /anaconda
 
+RUN apt-get install -y libgtk2.0-0
+
 RUN mkdir /src && \
     cd /src && \
     git clone https://github.com/h3dema/object_detector_app.git && \
